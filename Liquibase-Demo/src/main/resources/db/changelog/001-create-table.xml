@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+
+
+
+
+	<changeSet id="user_1" author="Kishore">
+
+		<createTable tableName="Account">
+			<column name="id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="name" type="varchar(50)">
+			</column>
+			<column name="email" type="varchar(50)">
+			</column>
+		</createTable>
+	</changeSet>
+
+
+	<!-- <changeSet id="user_2" author="kishore"> <insert tableName="Account"> 
+		<column name="name" value="Laya Kishore"/> <column name="email" value="layakishore@gmail.com"/> 
+		</insert> </changeSet> -->
+
+
+	<changeSet id="user_3" author="kishore">
+
+		<update tableName="Account">
+			<column name="email" value="kishore@gmail.com" />
+			<where>id = 1</where>
+
+		</update>
+
+	</changeSet>
+
+	<changeSet id="user_4" author="kishore">
+		<insert tableName="Account">
+			<column name="name" value="viany" />
+			<column name="email" value="vinay@gmail.com" />
+		</insert>
+	</changeSet>
+
+
+	<changeSet id="user_5" author="Kishore">
+
+		<update tableName="Account">
+			<column name="name" value="vinay" />
+			<where>id = 2</where>
+
+		</update>
+
+	</changeSet>
+
+
+	<changeSet id="user_6" author="kishore">
+		<insert tableName="Account">
+			<column name="name" value="Nookesh" />
+			<column name="email" value="Nookesh@gmail.com" />
+		</insert>
+	</changeSet>
+
+	<!-- <changeSet id="user_7" author="Kishore"> <delete tableName="Account"> 
+		<where>name = 'Nookesh'</where> </delete> </changeSet> -->
+
+
+
+
+</databaseChangeLog>
